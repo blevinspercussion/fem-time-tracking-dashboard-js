@@ -2,7 +2,7 @@
     /* Primary */
   
     --blue: hsl(246, 80%, 60%);
-    --light-red: hsl(15, 100%, 70%);
+    --light-orange: hsl(15, 100%, 70%);
     --soft-blue: hsl(195, 74%, 62%);
     --light-red: hsl(348, 100%, 68%);
     --lime-green: hsl(145, 58%, 55%);
@@ -92,7 +92,30 @@ ul {
 }
 
 .detail-card {
+    grid-row: 0;
+    grid-column: 2 / span 1;
+    margin: 0 20px 0 20px;
+    border-radius: 15px;
+    max-height: 18vh;
+    width: 8vw;
+}
+
+.detail-card-top {
     color: white;
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 2;
+    background-color: var(--light-orange);
+    border-radius: 15px;
+}
+
+.detail-card-bottom {
+    background-color: var(--dark-blue);
+    height: 135px;
+    position: relative;
+    top: -30px;
+    border-radius: 15px;
+}
+
+.detail-card-image {
+    margin-left: 110px;
 }
