@@ -106,9 +106,12 @@ ul {
     grid-column: 2;
     background-color: var(--light-orange);
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .detail-card-bottom {
+    color: white;
+    padding: 5px 15px 15px 15px;
     background-color: var(--dark-blue);
     height: 135px;
     position: relative;
@@ -118,4 +121,18 @@ ul {
 
 .detail-card-image {
     margin-left: 110px;
+    margin-top: -10px;
+}
+
+.last-week-text {
+    color: var(--pale-blue);
+    font-size: 18;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.ellipsis {
+    position: relative;
+    top: -132px;
+    left: 145px;
 }
