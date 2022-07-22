@@ -39,12 +39,11 @@ async function populatDetailCards() {
 
         // Add text to card elements
         detailCardTitle.textContent = `${data[i].title}`;
-        detailCardCurrentTime.textContent = `${data[i].timeframes.daily.current}`;
+        detailCardCurrentTime.textContent = `${data[i].timeframes.daily.current} hrs`;
         detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.daily.previous}`;
 
         // Set colors of elements
         detailCardBottom.style.backgroundColor = "var(--dark-blue)";
-        detailCardTop.style.backgroundColor = "var(--light-orange)";
 
         switch(data[i].title) {
             case 'Work':
@@ -52,7 +51,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 2;
                 detailCard.style.gridColumnEnd = 3;
-                detailCardTop.style.color = 'var(--light-red)';
+                detailCardTop.style.backgroundColor = 'var(--light-orange)';
                 break;
             
             case 'Play':
@@ -60,7 +59,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 3;
                 detailCard.style.gridColumnEnd = 4;
-                detailCardTop.style.color = 'var(--soft-blue)';
+                detailCardTop.style.backgroundColor = 'var(--soft-blue)';
                 break;
 
             case 'Study':
@@ -68,7 +67,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 4;
                 detailCard.style.gridColumnEnd = 5;
-                detailCardTop.style.color = 'var(--light-red)';
+                detailCardTop.style.backgroundColor = 'var(--light-red)';
                 break;
             
             case 'Exercise':
@@ -76,7 +75,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 2;
                 detailCard.style.gridColumnEnd = 3;
-                detailCardTop.style.color = 'var(--light-red)';
+                detailCardTop.style.backgroundColor = 'var(--lime-green)';
                 break;
 
             case 'Social':
@@ -84,15 +83,15 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 3;
                 detailCard.style.gridColumnEnd = 4;
-                detailCardTop.style.color = 'var(--light-red)';
+                detailCardTop.style.backgroundColor = 'var(--violet)';
                 break;
 
-            case 'Selfcare':
+            case 'Self Care':
                 detailCard.style.gridRowStart = 2;
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 4;
                 detailCard.style.gridColumnEnd = 5;
-                detailCardTop.style.color = 'var(--light-red)';
+                detailCardTop.style.backgroundColor = 'var(--soft-orange)';
                 break;
         }
 
