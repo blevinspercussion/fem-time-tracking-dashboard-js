@@ -16,12 +16,34 @@ async function populatDetailCards() {
         let ellipsis = document.createElement('img');
 
         // Set id and class of elements
-        detailCard.id = (`detailCard${data[i].title}`);
+        detailCard.id = (`detail-card${data[i].title}`);
         detailCard.classList.add('detail-card');
+
+        detailCardTop.id = (`detail-card-top${data[i].title}`);
+        detailCard.classList.add('detail-card-top');
+
+        detailCardImage.id = (`detail-card-image${data[i].title}`);
+        detailCardImage.classList.add('detail-card-image');
+
+        detailCardBottom.id = (`detail-card-bottom${data[i].title}`);
+        detailCardBottom.classList.add('detail-card-bottom');
+
+        detailCardTitle.id = (`detail-card-title${data[i].title}`);
+        detailCardCurrentTime.id = (`detail-card-current-time${data[i].title}`);
+
+        detailCardPreviousTime.id = (`detail-card-previous-time${data[i].title}`);
+        detailCardPreviousTime.classList.add('last-week-text');
+
+        // Add images to detail cards
+        
+
+        
 
         // Add elements to the DOM
 
         mainContent.appendChild(detailCard);
+        detailCard.appendChild(detailCardTop);
+
         
 
     }
