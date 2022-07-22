@@ -48,7 +48,7 @@ ul {
     background-color: var(--dark-blue);
     border-radius: 15px;
     color: var(--desaturated-blue);
-    grid-row: 1;
+    grid-row: 1 / span 2;
     grid-column: 1;
 }
 
@@ -92,15 +92,15 @@ ul {
 }
 
 .detail-card {
-    grid-row: 0;
-    grid-column: 2 / span 1;
+    /* grid-row: 0;
+    grid-column: 2 / span 1; */
     margin: 0 20px 0 20px;
     border-radius: 15px;
     max-height: 18vh;
     width: 8vw;
 }
 
-.detail-card-top {
+/* .detail-card-top {
     color: white;
     grid-row: 1;
     grid-column: 2;
@@ -135,4 +135,4 @@ ul {
     position: relative;
     top: -132px;
     left: 145px;
-}
+} */
