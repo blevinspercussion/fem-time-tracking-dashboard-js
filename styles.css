@@ -164,9 +164,17 @@ ul {
 
 }
 
+.ellipsis-div {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
 .ellipsis {
     height: 0.6vh;
-    margin: 20px 0 0 85px;
+    margin: 20px 0 0 125px;
 }
 
 .last-week-text {

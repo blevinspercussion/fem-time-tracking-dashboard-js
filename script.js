@@ -57,6 +57,7 @@ async function populateDetailCards(timePeriod) {
         detailCardPreviousTime.id = (`detail-card-previous-time${data[i].title}`);
         detailCardPreviousTime.classList.add('last-week-text');
 
+        ellipsisDiv.classList.add('ellipsis-div');
         ellipsis.classList.add('ellipsis');
 
         // Add images to detail cards
@@ -156,7 +157,8 @@ async function populateDetailCards(timePeriod) {
         detailCardBottomLeft.appendChild(detailCardTitle);
         detailCardBottomLeft.appendChild(detailCardCurrentTime);
         detailCardBottomLeft.appendChild(detailCardPreviousTime);
-        detailCardBottom.appendChild(ellipsis);
+        detailCardBottom.appendChild(ellipsisDiv)
+        ellipsisDiv.appendChild(ellipsis);
 
 
         
