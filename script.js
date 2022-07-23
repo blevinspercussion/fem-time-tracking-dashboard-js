@@ -70,6 +70,10 @@ async function populateDetailCards(timePeriod) {
                 detailCardCurrentTime.textContent = `${data[i].timeframes.monthly.current} hrs`;
                 detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.monthly.previous} hrs`;
                 break;
+
+            default:
+                detailCardCurrentTime.textContent = '--';
+                detailCardPreviousTime.textContent = '--';
         }
 
         // Set colors of elements
