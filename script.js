@@ -8,7 +8,7 @@ async function populatDetailCards() {
         // Create Detail Card elements
         let detailCard = document.createElement('div');
         let detailCardTop = document.createElement('div');
-        let detailCardImage = document.createElement('div');
+        let detailCardImage = document.createElement('img');
         let detailCardBottom = document.createElement('div');
         let detailCardTitle = document.createElement('p');
         let detailCardCurrentTime = document.createElement('h1');
@@ -51,6 +51,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 2;
                 detailCard.style.gridColumnEnd = 3;
+                detailCardImage.src = './img/icon-work.svg';
                 detailCardTop.style.backgroundColor = 'var(--light-orange)';
                 break;
             
@@ -59,6 +60,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 3;
                 detailCard.style.gridColumnEnd = 4;
+                detailCardImage.src = './img/icon-play.svg';
                 detailCardTop.style.backgroundColor = 'var(--soft-blue)';
                 break;
 
@@ -67,6 +69,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 2;
                 detailCard.style.gridColumnStart = 4;
                 detailCard.style.gridColumnEnd = 5;
+                detailCardImage.src = './img/icon-study.svg';
                 detailCardTop.style.backgroundColor = 'var(--light-red)';
                 break;
             
@@ -75,6 +78,8 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 2;
                 detailCard.style.gridColumnEnd = 3;
+                detailCardImage.src = './img/icon-exercise.svg';
+                detailCardImage.style.marginTop = 0;
                 detailCardTop.style.backgroundColor = 'var(--lime-green)';
                 break;
 
@@ -83,6 +88,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 3;
                 detailCard.style.gridColumnEnd = 4;
+                detailCardImage.src = './img/icon-social.svg';
                 detailCardTop.style.backgroundColor = 'var(--violet)';
                 break;
 
@@ -91,6 +97,7 @@ async function populatDetailCards() {
                 detailCard.style.gridRowEnd = 3;
                 detailCard.style.gridColumnStart = 4;
                 detailCard.style.gridColumnEnd = 5;
+                detailCardImage.src = './img/icon-self-care.svg';
                 detailCardTop.style.backgroundColor = 'var(--soft-orange)';
                 break;
         }

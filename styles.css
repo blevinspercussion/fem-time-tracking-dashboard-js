@@ -113,6 +113,14 @@ ul {
     border-radius: 15px;
     height: 100px;
     z-index: -1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.detail-card-image {
+    margin-top: -25px;
 }
 
 /* .detail-card-top {
