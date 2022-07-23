@@ -1,8 +1,10 @@
 const mainContent = document.getElementById('main-content');
 
-async function populatDetailCards() {
+async function populateDetailCards(timePeriod) {
     const response = await fetch('./data.json');
     const data = await response.json();
+
+    console.log(timePeriod);
 
     for (let i=0; i<data.length; i++) {
         // Create Detail Card elements
@@ -46,8 +48,23 @@ async function populatDetailCards() {
 
         // Add text to card elements
         detailCardTitle.textContent = `${data[i].title}`;
-        detailCardCurrentTime.textContent = `${data[i].timeframes.daily.current} hrs`;
-        detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.daily.previous}`;
+        
+        switch (timePeriod) {
+            case 'daily':
+                detailCardCurrentTime.textContent = `${data[i].timeframes.daily.current} hrs`;
+                detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.daily.previous} hrs`;
+                break;
+
+            case 'weekly':
+                detailCardCurrentTime.textContent = `${data[i].timeframes.weekly.current} hrs`;
+                detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.weekly.previous} hrs`;
+                break;
+
+            case 'monthly':
+                detailCardCurrentTime.textContent = `${data[i].timeframes.monthly.current} hrs`;
+                detailCardPreviousTime.textContent = `Last week - ${data[i].timeframes.monthly.previous} hrs`;
+                break;
+        }
 
         // Set colors of elements
         detailCardBottom.style.backgroundColor = "var(--dark-blue)";
@@ -131,4 +148,4 @@ async function populatDetailCards() {
 
 
 
-populatDetailCards();
+populateDetailCards('monthly');
