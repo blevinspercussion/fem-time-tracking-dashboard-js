@@ -1,5 +1,11 @@
+// Get main DOM elements
 const mainContent = document.getElementById('main-content');
 
+const dailyLink = document.getElementById("daily-link");
+const weeklyLink = document.getElementById("weekly-link");
+const monthlyLink = document.getElementById("monthly-link");
+
+// Function to dynamically populate detail cards with correct info from JSON file
 async function populateDetailCards(timePeriod) {
     const response = await fetch('./data.json');
     const data = await response.json();
@@ -148,4 +154,36 @@ async function populateDetailCards(timePeriod) {
 
 
 
-populateDetailCards('monthly');
+populateDetailCards();
+
+dailyLink.addEventListener('click', () => {
+    populateDetailCards('daily');
+    dailyLink.classList.add('selected-link');
+    weeklyLink.classList.remove('selected-link');
+    monthlyLink.classList.remove('selected-link');
+
+    // dailyLink.style.color = 'white';
+    // weeklyLink.style.color = 'var(--desaturated-blue)';
+    // monthlyLink.style.color = 'var(--desaturated-blue)';
+
+});
+
+weeklyLink.addEventListener('click', () => {
+    populateDetailCards('weekly');
+    dailyLink.classList.remove('selected-link');
+    weeklyLink.classList.add('selected-link');
+    monthlyLink.classList.remove('selected-link');
+    // weeklyLink.style.color = 'white';
+    // dailyLink.style.color = 'var(--desaturated-blue)';
+    // monthlyLink.style.color = 'var(--desaturated-blue)';
+});
+
+monthlyLink.addEventListener('click', () => {
+    populateDetailCards('monthly');
+    dailyLink.classList.remove('selected-link');
+    weeklyLink.classList.remove('selected-link');
+    monthlyLink.classList.add('selected-link');
+    // monthlyLink.style.color = 'white';
+    // dailyLink.style.color = 'var(--desaturated-blue)';
+    // weeklyLink.style.color = 'var(--desaturated-blue)';
+})
