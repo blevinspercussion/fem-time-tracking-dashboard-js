@@ -73,7 +73,6 @@ async function populateDetailCards(timePeriod) {
         }
 
         // Set colors of elements
-        detailCardBottom.style.backgroundColor = "var(--dark-blue)";
 
         switch(data[i].title) {
             case 'Work':
