@@ -10,9 +10,18 @@ async function populateDetailCards(timePeriod) {
     const response = await fetch('./data.json');
     const data = await response.json();
 
-    console.log(timePeriod);
+    // Remove all detail cards
+    const allDetailCards = document.querySelectorAll('.detail-card');
+    console.log('removing');
+    allDetailCards.forEach(detailCard => {
+        detailCard.remove();
+        console.log('removed');
+    });
+
+    let contentExists = !!document.getElementById('user-card');
 
     for (let i=0; i<data.length; i++) {
+
         // Create Detail Card elements
         let detailCard = document.createElement('div');
         let detailCardTop = document.createElement('div');
@@ -24,6 +33,7 @@ async function populateDetailCards(timePeriod) {
         let detailCardPreviousTime = document.createElement('p');
         let ellipsisDiv = document.createElement('div');
         let ellipsis = document.createElement('img');
+
 
         // Set id and class of elements
         detailCard.id = (`detail-card${data[i].title}`);

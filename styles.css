@@ -173,7 +173,7 @@ ul {
     color: var(--desaturated-blue);
 }
 
-@media (max-width: 1900px) {
+@media (max-width: 1000px) {
     #main-content {
         display: flex;
         flex-direction: column;
