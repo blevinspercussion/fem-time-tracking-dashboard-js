@@ -51,7 +51,26 @@ ul {
     grid-column: 1;
 }
 
-#user-card li {
+#user-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 2rem;
+    margin-top: -1rem;
+}
+
+#user-card-bottom li {
+    padding-top: 1rem;
+
+}
+
+#user-card-bottom li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* #user-card li {
     margin: 0 0 10px -15px;
     font-weight: 700;
     padding-bottom: 10px;
@@ -60,7 +79,7 @@ ul {
 #user-card ul {
     padding-bottom: 8px;
     margin: 25px 0 0 25px;
-}
+} */
 
 
 #user-card-top {
