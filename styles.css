@@ -184,6 +184,9 @@ ul {
     #user-card {
         display: flex;
         flex-direction: column;
+        max-width: 55vw;
+        min-height: 10px;
+        max-height: 45vh;
     }
 
     #user-card-top {
@@ -198,12 +201,12 @@ ul {
         display: flex;
         border-radius: 15px;
         z-index: 0;
-        width: 45vw;
-        height: 5vh;
+        max-height: 4vh;
     }
 
     #user-card-bottom ul {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
     }
