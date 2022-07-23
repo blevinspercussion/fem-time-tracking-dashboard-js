@@ -177,6 +177,10 @@ ul {
     margin: 20px 0 0 125px;
 }
 
+.ellipsis-div img:hover {
+    filter: brightness(100);
+}
+
 .last-week-text {
     color: var(--desaturated-blue);
 }

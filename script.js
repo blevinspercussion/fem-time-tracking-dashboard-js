@@ -12,10 +12,8 @@ async function populateDetailCards(timePeriod) {
 
     // Remove all detail cards
     const allDetailCards = document.querySelectorAll('.detail-card');
-    console.log('removing');
     allDetailCards.forEach(detailCard => {
         detailCard.remove();
-        console.log('removed');
     });
 
     let contentExists = !!document.getElementById('user-card');
