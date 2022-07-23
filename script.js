@@ -10,9 +10,11 @@ async function populatDetailCards() {
         let detailCardTop = document.createElement('div');
         let detailCardImage = document.createElement('img');
         let detailCardBottom = document.createElement('div');
+        let detailCardBottomLeft = document.createElement('div');
         let detailCardTitle = document.createElement('p');
         let detailCardCurrentTime = document.createElement('h1');
         let detailCardPreviousTime = document.createElement('p');
+        let ellipsisDiv = document.createElement('div');
         let ellipsis = document.createElement('img');
 
         // Set id and class of elements
@@ -28,11 +30,16 @@ async function populatDetailCards() {
         detailCardBottom.id = (`detail-card-bottom${data[i].title}`);
         detailCardBottom.classList.add('detail-card-bottom');
 
+        detailCardBottomLeft.id = (`detail-card-bottom-left${data[i].title}`);
+        detailCardBottomLeft.classList.add('detail-card-bottom-left');
+
         detailCardTitle.id = (`detail-card-title${data[i].title}`);
         detailCardCurrentTime.id = (`detail-card-current-time${data[i].title}`);
 
         detailCardPreviousTime.id = (`detail-card-previous-time${data[i].title}`);
         detailCardPreviousTime.classList.add('last-week-text');
+
+        ellipsis.classList.add('ellipsis');
 
         // Add images to detail cards
         ellipsis.src = './img/icon-ellipsis.svg';
@@ -109,9 +116,10 @@ async function populatDetailCards() {
         detailCard.appendChild(detailCardTop);
         detailCardTop.appendChild(detailCardImage);
         detailCard.appendChild(detailCardBottom);
-        detailCardBottom.appendChild(detailCardTitle);
-        detailCardBottom.appendChild(detailCardCurrentTime);
-        detailCardBottom.appendChild(detailCardPreviousTime);
+        detailCardBottom.appendChild(detailCardBottomLeft);
+        detailCardBottomLeft.appendChild(detailCardTitle);
+        detailCardBottomLeft.appendChild(detailCardCurrentTime);
+        detailCardBottomLeft.appendChild(detailCardPreviousTime);
         detailCardBottom.appendChild(ellipsis);
 
 
